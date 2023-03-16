@@ -21,9 +21,10 @@
             <label for="{{ form.file.id }}" class="col-sm-2 col-form-label">Файл:</label>
             <div class="col-sm-5">
                 <div class="custom-file">
-                    {{ form.file.label }}
-                    {{ form.file(class="custom-file-input") }}
-                    <label class="custom-file-label" for="{{ form.file.id }}">{{ form.file.label.text }}</label>
+                    {{ form.file(class="custom-file-input",
+                    onchange="document.getElementById('customFileLabel').innerHTML = this.files[0].name") }}
+                    <label class="custom-file-label" for="{{ form.file.id }}" id="customFileLabel">{{
+                        form.file.label.text }}</label>
                 </div>
             </div>
         </div>
