@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4  text-center text-light">Список пользователей</h1>
+    <ol class="list-group align-items-left">
+        {% for user in users %}
+        {% if user != current_user %}
+        <li class="list-group-item bg-secondary text-light">
+            <a href="{{ url_for('view_playlist', username=user.username) }}" class="text-light">{{ user.username }}</a>
+
+        </li>
+        {% endif%}
+        {% endfor %}
+    </ol>
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron jumbotron-fluid bg-dark text-light text-center container mt-5">
+    <h1 class="display-4">Добро пожаловать в приложение "MyMusic"</h1>
+    <p class="lead">В этом приложении вы можете загружать и воспроизводить свои любимые песни.</p>
+    <hr class="my-4">
+    <p>Авторизируйтесь или зарегистрируйтесь в приложении</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('login') }}" role="button">Авторизация</a>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('register') }}" role="button">Регистрация</a>
+</div>
+{% endblock %}
